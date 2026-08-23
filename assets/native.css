@@ -68,4 +68,42 @@
 .highlight .vg { color: #40ffff } /* Name.Variable.Global */
 .highlight .vi { color: #40ffff } /* Name.Variable.Instance */
 .highlight .il { color: #3677a9 } /* Literal.Number.Integer.Long */
+/* Fix Rouge Line Number Table Layout */
+.highlight {
+    background-color: #404040 !important; /* Match the dark background */
+    padding: 15px;
+    border-radius: 5px; /* Optional: rounds the corners of the code block */
+    overflow-x: auto; /* Adds a scrollbar if code is too wide */
+    border: none;
+}
 
+.highlight table.rouge-table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    border: none;
+}
+
+.highlight table.rouge-table td {
+    padding: 0;
+    border: none !important; /* Removes the white vertical lines */
+    background-color: transparent !important;
+}
+
+/* Style the line numbers column */
+.highlight table.rouge-table .rouge-gutter {
+    width: 35px;
+    text-align: right;
+    padding-right: 15px;
+    user-select: none; /* Prevents copying line numbers when selecting code */
+}
+
+/* Style the code text column */
+.highlight table.rouge-table .rouge-code pre {
+    border-left: 1px solid #666; /* Adds a subtle dark gray vertical separator */
+    padding-left: 15px;
+    margin: 0;
+    background-color: transparent;
+}
